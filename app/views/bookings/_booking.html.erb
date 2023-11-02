@@ -1,0 +1,18 @@
+<div id="<%= dom_id booking %>">
+  <p>
+    <strong>Date time:</strong>
+    <%= booking.date_time %>
+  </p>
+
+  <p>
+    <strong>Table:</strong>
+    <%=  "#{booking.table.code}, capacity: #{booking.table.capacity}" %>
+
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= booking.user.name %>
+  </p>
+
+</div>

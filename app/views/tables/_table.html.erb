@@ -1,0 +1,13 @@
+<div id="<%= dom_id table %>">
+  <p>
+    <strong>Code:</strong>
+    <%= table.code %>
+  </p>
+
+  <p>
+    <strong>Capacity:</strong>
+    <%= table.capacity %>
+  </p>
+
+  <%= link_to  "Reservar esta mesa", new_booking_path(table_id: table.id) %>
+</div>

@@ -1,0 +1,22 @@
+version: '3'
+volumes:
+  postgres_data: {}
+services:
+  app:
+    build: .
+    depends_on:
+      - db
+    links:
+      - db:db
+    #env_file:
+    #  - .env
+    ports:
+      - "3003:3000"
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ~/projects/data/admin_facil:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
