@@ -13,6 +13,7 @@
   <body>
     <%= link_to "reservas" , bookings_path %>
     <%= link_to "Mesas" , tables_path %>
+    <%= link_to "Salir" , destroy_user_session_path , data: { turbo_method: :delete }  %>
     <%= yield %>
   </body>
 </html>

@@ -7,3 +7,16 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+Booking.destroy_all
+Table.destroy_all
+User.destroy_all
+puts "Database tables cleaned"
+
+Table.create!(code: "1", capacity: 4)
+Table.create!(code: "C4", capacity: 3)
+
+puts "Tables created"
+
+User.create!(email: "user@example.com",name: "User example", password: "12345678")
+
+puts "User created"
